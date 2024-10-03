@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Whac-A-Mario</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <audio src="whack01-105535.mp3" id="whack-sound"></audio>
+        <audio src="game-over-arcade-6435.mp3" id="game_over"></audio>
+        <audio src="achievement-video-game-type-1-230515.mp3" id="start-button"></audio>
+        <audio src="game-bg-music.mp3" id="bg-music" loop="true"></audio>
+        <button id="mute" onclick="sound()"><i class="fa-solid fa-volume-xmark" id="sound-button"></i></button>
+        <div id="start-game">
+            <h1 id="title">Whac-A-Mario</h1>
+            <h2 id="difficulty-label">Select Difficulty:</h2>
+            <select id="difficulty">
+                <option value="easy" selected>Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+                <option value="impossible" style="background-color: red;">IMPOSSIBLE</option>
+            </select><br><br><br>
+            <button id="start" onclick="start()">START</button><br>
+        </div>
+        <footer><h5>Sound Effect from <a href="https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6435">Pixabay</a></h5></footer>
+        <script src="script.js"></script>
+        <script src="https://kit.fontawesome.com/19c60793e2.js" crossorigin="anonymous"></script>
+    </body>
+</html>
