@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Whac-A-Mario</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <audio src="whack01-105535.mp3" id="whack-sound"></audio>
+        <audio src="game-over-arcade-6435.mp3" id="game_over"></audio>
+        <audio src="achievement-video-game-type-1-230515.mp3" id="start-button"></audio>
+        <audio src="game-bg-music.mp3" id="bg-music" loop="true"></audio>
+        <button id="mute"><i class="fa-solid fa-volume-xmark" id="sound-button"></i></button>
+        <table id="leaderboard">
+            <tbody id="lbbody">
+            <tr>
+            <th colspan="3">LEADERBOARD</th>
+            </tr>
+            <tr>
+            <th>Position</th>
+            <th>Name</th>
+            <th>Score</th>
+            </tr>
+            </tbody>
+        </table>
+        <div id="start-game">
+            <h1 id="title">Whac-A-Mario</h1>
+            <h3 style="color: rgb(83, 4, 4);" id="warning">DON'T HIT THE PLANTS!</h3>
+            <input type="text" id="username" placeholder="Enter Username: (Please enter same as last time, if any.)"/>
+            <h2 id="difficulty-label"><b>Select Difficulty:</b></h2>
+            <select id="difficulty">
+                <option value="easy" selected>Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+                <option value="impossible" style="background-color: red;">IMPOSSIBLE</option>
+            </select><br><br><br>
+            <button id="start">START</button><br>
+        </div>
+        <h5>Sound Effect from <a href="https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6435">Pixabay.</a>  &nbsp; Website made purely using HTML, CSS, JS.</h5>
+        <script src="script.js" type="module" defer></script>
+        <script src="https://kit.fontawesome.com/19c60793e2.js" crossorigin="anonymous"></script>
+    </body>
+</html>

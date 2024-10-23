@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@font-face {
+    font-family: 'SuperMario256';
+    src: url('SuperMario256.ttf');
+  }
+
+body{
+    font-family: "Tiny5", sans-serif;
+    background: url("mario-bg.png") no-repeat no-repeat;
+    background-size: cover;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    cursor: url('hammerdown.png'), auto;
+    user-select: none;
+}
+
+#start{
+    padding: 20px;
+    font-size: 40px;
+    background-color: gold;
+    color: white;
+    font-family: "Tiny5", sans-serif;
+    border: 12px ridge green;
+    border-radius: 15px;
+    cursor: url('hammerdown.png'), auto;
+}
+
+#title{
+    font-family: 'SuperMario256';
+    margin-top: 0;
+    padding: 0;
+    color: rgb(210, 28, 28);
+    font-size: 4rem
+}
+
+#hs-span{
+    padding: 0;
+    left: 0.5rem;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    text-align: left;
+}
+
+#highScore{
+    padding: 0;
+    top: 0;
+    color: rgb(34, 196, 104);
+}
+
+#score{
+    position: absolute;
+    top: 2rem;
+    padding: 0;
+    color: gold;
+}
+
+#countdowntimer{
+    position: absolute;
+    top: 2rem;
+    padding: 0;
+    color: gold;
+    font-size: 70px;
+}
+
+#board{
+    width: 540px;
+    height: 540px;
+    background-image: url("soil.png");
+    background-size: cover;
+    border: 3px ridge white;
+    border-radius: 25px;
+
+    margin: 0 auto;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    color: rgb(223, 96, 96);
+    font-size: 4.5rem;
+}
+
+#board div{
+    margin: 0;
+    width: 180px;
+    height: 180px;
+    background-image: url("pipe.png");
+    background-size: cover;
+}
+
+#board div img{
+    width: 100px;
+    height: 100px;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#board button{
+    width: 70%;
+    height: fit-content;
+    padding: 1rem;
+    margin-left: 81px;
+
+    color: white;
+    font-size: 40px;
+    background-color: green;
+    font-family: "Tiny5", sans-serif;
+    border: 7px ridge darkgreen;
+    border-radius: 30px;
+
+    cursor: url('hammerdown.png'), auto;
+}
+
+#board:hover{
+    cursor: url('hammerdown.png'), auto;
+}
+
+#difficulty-label{
+    font-family: "Orbitron", sans-serif;
+    font-size: 35px;
+    color: rgb(70, 64, 64);
+}
+
+#difficulty{
+    font-size: 25px;
+    padding: 10px;
+    background-color: gold;
+    color: white;
+    font-family: "Orbitron", sans-serif;
+    border: 10px ridge green;
+    border-radius: 15px;
+    appearance: none;
+}
+
+#mute{
+    position: absolute;
+    font-size: 30px;
+    top:5px;
+    right:0;
+    left: 72rem;
+    bottom:0;
+    width: 70px;
+    height: 70px;
+    border: 5px ridge green;
+    border-radius: 30px;
+    background-color: yellow;
+    cursor: url('hammerdown.png'), auto;
+    z-index: 5;
+}
+
+#username{
+    padding: 15px;
+    font-family: "Orbitron", sans-serif;
+    width: 35%;
+}
+
+#leaderboard{
+    position: absolute;
+    padding:0;
+    border-collapse: collapse;
+}
+
+td{
+    padding: 5px;
+    font-size: 20px;
+    line-height: 120%;
+    border: 3px solid red;
+}
+th{
+    padding: 5px;
+    font-size: 20px;
+    line-height: 120%;
+    border: 3px solid black;
+}
+
+tr:nth-child(even){
+    background-color: azure;
+}
+
+tr:nth-child(odd){
+    background-color: gold;
+}
