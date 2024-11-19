@@ -13,4 +13,13 @@ Added:
 
 Doing all this alone took a lot of time...hope u enjoy
 
-  V 1.2 coming up will add compatibility for mobile and tablets.
+Version 1.2 - 19/11/2024
+Another Massive and Final update
+Changes:
+- **MADE IT SO THAT YOU CAN ONLY CHOOSE YOUR USERNAME ONCE**
+- Better font
+- Decided to scrap responsiveness
+- Made leaderboard collapsible
+- Made animations smoother
+- New BG image
+- Fixed bugs
