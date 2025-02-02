@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Silkscreen:wght@400;700&display=swap');
+@font-face {
+    font-family: 'SuperMario256';
+    src: url('SuperMario256.ttf');
+  }
+
+body{
+    font-family: "Silkscreen", sans-serif;
+    background: url("bg.png") no-repeat no-repeat;
+    background-size: cover;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    cursor: url('hammerdown.png'), auto;
+    user-select: none;
+}
+
+#start{
+    padding: 20px;
+    font-size: 40px;
+    background-color: gold;
+    color: white;
+    font-family: "Silkscreen", sans-serif;
+    border: 12px ridge green;
+    border-radius: 15px;
+    cursor: url('hammerdown.png'), auto;
+}
+
+#save{
+    padding: 10px;
+    font-size: 20px;
+    background-color: gold;
+    color: white;
+    font-family: "Silkscreen", sans-serif;
+    border: 8px ridge green;
+    border-radius: 15px;
+    cursor: url('hammerdown.png'), auto;
+}
+
+@keyframes float-in{
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+#title{
+    font-family: 'SuperMario256';
+    margin-top: 0;
+    padding: 0;
+    color: rgb(210, 28, 28);
+    font-size: 4rem;
+}
+
+#start-game{
+    margin: 0;
+    padding: 0;
+    animation: float-in ease-in-out 2s;
+}
+
+#hs-span{
+    padding: 0;
+    left: 0.5rem;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    text-align: left;
+}
+
+#highScore{
+    padding: 0;
+    top: 0;
+    color: rgb(17, 115, 59);
+}
+
+#score{
+    position: absolute;
+    top: 2rem;
+    padding: 0;
+    color: gold;
+}
+
+#countdowntimer{
+    position: absolute;
+    top: 2rem;
+    padding: 0;
+    color: gold;
+    font-size: 60px;
+}
+
+#board{
+    max-width: 33.75rem;
+    height: 33.75rem;
+    background-image: url("soil.png");
+    background-size: cover;
+    border: 3px ridge white;
+    border-radius: 25px;
+
+    margin: 0 auto;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    color: rgb(223, 96, 96);
+    font-size: 3.5rem;
+}
+
+#board div{
+    margin: 0;
+    width: 11.25rem;
+    height: 11.25rem;
+    background-image: url("pipe.png");
+    background-size: cover;
+}
+
+#board div img{
+    width: 100px;
+    height: 100px;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#board button{
+    width: 70%;
+    height: fit-content;
+    padding: 1rem;
+    margin-left: 15%;
+
+    color: white;
+    font-size: 40px;
+    background-color: green;
+    font-family: "Silkscreen", sans-serif;
+    border: 7px ridge darkgreen;
+    border-radius: 30px;
+
+    cursor: url('hammerdown.png'), auto;
+}
+
+#board:hover{
+    cursor: url('hammerdown.png'), auto;
+}
+
+#difficulty-label{
+    font-family: "Orbitron", sans-serif;
+    font-size: 25px;
+    color: #7851A9;
+}
+
+#difficulty{
+    font-size: 25px;
+    padding: 10px;
+    background-color: gold;
+    color: white;
+    font-family: "Orbitron", sans-serif;
+    border: 10px ridge green;
+    border-radius: 15px;
+    appearance: none;
+}
+
+.mute{
+    position: absolute;
+    width:100%;
+    text-align: right;
+    top:5px;
+    left: 0;
+}
+
+#mute{
+    margin-right: 0.5rem;
+    font-size: 30px;
+    width: 70px;
+    height: 70px;
+    border: 5px ridge green;
+    border-radius: 30px;
+    background-color: yellow;
+    cursor: pointer;
+    z-index: 5;
+}
+
+@keyframes animText {
+    from {
+        transform: translateX(-100%); 
+    }
+
+    to{
+        transform: translateX(100%);
+    }
+  }
+
+#username{
+    padding: 15px;
+    font-family: "Orbitron", sans-serif;
+    width: 35%;
+    position: relative;
+}
+
+#leaderboard{
+    z-index: 11;
+    position: absolute;
+    padding:0;
+    border-collapse: collapse;
+    table-layout: fixed;
+    display: block;
+}
+
+#leaderboard > tbody{
+    display: block;
+    height: 25rem;
+    width: fit-content;
+    overflow: auto;
+}
+
+tr:first-child{
+    cursor: pointer;
+}
+
+td{
+    padding: 5px;
+    font-size: 15px;
+    border: 3px solid red;
+    width: 2rem;
+}
+th{
+    padding: 5px;
+    font-size: 17px;
+    border: 3px solid black;
+}
+
+tr:nth-child(even){
+    background-color: azure;
+}
+
+tr:nth-child(odd){
+    background-color: gold;
+}
+
+#hidden {
+    display: none;
+}
+
+#scrollable{
+    overflow:scroll;
+    height:100px;
+}
+
+@media screen and (min-width: 768px) and (max-width:1023px) {
+    #board{
+        width: 100%;
+        height: max-content;
+        background-image: url("soil.png");
+        background-size: cover;
+        border: 3px ridge white;
+        border-radius: 25px;
+    
+        margin: 0 auto;
+        top: 0;
+        display: flex;
+        flex-wrap: wrap;
+    
+        align-items: center;
+        color: rgb(223, 96, 96);
+        font-size: 40px;
+    }
+    
+    #board div{
+        margin: 0;
+        width: 176px;
+        height: 176px;
+        background-image: url("pipe.png");
+        background-size: cover;
+    }
+    
+    #board div img{
+        width: 96px;
+        height: 96px;
+    
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    
+    #board button{
+        width: 70%;
+        height: fit-content;
+        padding: 1rem;
+        margin-left: 15%;
+    
+        color: white;
+        font-size: 1.85rem;
+        background-color: green;
+        font-family: "Silkscreen", sans-serif;
+        border: 7px ridge darkgreen;
+        border-radius: 30px;
+    
+        cursor: url('hammerdown.png'), auto;
+    }
+}
+
+@media screen and (max-width:405px){
+    #hs-span{
+        padding: 0;
+        margin: 0;
+        position: relative;
+        width: 100%;
+        height: fit-content;
+        text-align: center;
+    }
+    
+    #highScore{
+        padding: 0;
+        margin: 0;
+        color: rgb(17, 115, 59);
+    }
+    
+    #score{
+        position: relative;
+        padding: 0;
+        margin: 0;
+        color: gold;
+    }
+    
+    #countdowntimer{
+        position: relative;
+        padding: 0;
+        color: gold;
+        font-size: 40px;
+        bottom: 30;
+    }
+    #board{
+        width: 100%;
+        height: max-content;
+        background-image: url("soil.png");
+        background-size: cover;
+        border: 3px ridge white;
+        border-radius: 25px;
+    
+        margin: 0 auto;
+        top: 0;
+        display: flex;
+        flex-wrap: wrap;
+    
+        align-items: center;
+        color: rgb(223, 96, 96);
+        font-size: 40px;
+    }
+    
+    #board div{
+        margin: 0;
+        width: 117px;
+        height: 117px;
+        background-image: url("pipe.png");
+        background-size: cover;
+    }
+    
+    #board div img{
+        width: 70px;
+        height:70px;
+    
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    
+    #board button{
+        width: 70%;
+        height: fit-content;
+        padding: 1rem;
+        margin-left: 15%;
+    
+        color: white;
+        font-size: 1.85rem;
+        background-color: green;
+        font-family: "Silkscreen", sans-serif;
+        border: 7px ridge darkgreen;
+        border-radius: 30px;
+    
+        cursor: url('hammerdown.png'), auto;
+    }
+}
