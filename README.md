@@ -23,3 +23,9 @@ Changes:
 - Made animations smoother
 - New BG image
 - Fixed bugs
+
+Version 1.3 - 2/2/2024
+Actual Final update
+Changes:
+- Made the website responsive
+- Fixed bugs where leaderboard wouldnt collapse, and the timer would go negative
